@@ -1,77 +1,76 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Quick JS Injection : For testing fun JS scripts!">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Quick JS Injection</title>
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Quick JS Injection by geoffdutton</title>
   </head>
 
   <body>
+    <div id="container">
+      <div class="inner">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/geoffdutton/geoffdutton">View on GitHub</a>
-
-          <h1 id="project_title">Quick JS Injection</h1>
-          <h2 id="project_tagline">For testing fun JS scripts!</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/geoffdutton/geoffdutton/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/geoffdutton/geoffdutton/tarball/master">Download this project as a tar.gz file</a>
-            </section>
+        <header>
+          <h1>Quick JS Injection</h1>
+          <h2>For testing fun JS scripts!</h2>
         </header>
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a id="make-sure-the-chrome-bookmarklet-bar-is-shown" class="anchor" href="#make-sure-the-chrome-bookmarklet-bar-is-shown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Make sure the Chrome Bookmarklet bar is shown</h3>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/geoffdutton/geoffdutton/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/geoffdutton/geoffdutton/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/geoffdutton/geoffdutton" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
 
-<p><img src="http://i.imgur.com/uqu3A4v.png" alt="Chrome Show Bookmarlet Bar"></p>
+        <hr>
+
+        <section id="main_content">
+          <h3>
+<a id="step-1-make-sure-the-chrome-bookmarklet-bar-is-shown" class="anchor" href="#step-1-make-sure-the-chrome-bookmarklet-bar-is-shown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1: Make sure the Chrome Bookmarklet bar is shown</h3>
+
+<p><img src="http://i.imgur.com/uqu3A4v.png" alt="Chrome Show Bookmarlet Bar">   </p>
 
 <h3>
-<a id="adding-the-bookmarks" class="anchor" href="#adding-the-bookmarks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding the bookmarks</h3>
+<a id="step-2-adding-the-bookmarks" class="anchor" href="#step-2-adding-the-bookmarks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: Adding the bookmarks</h3>
 
-<p>For each below, right click on the bookmarks bar, and click 'Add Page'. Then enter the Name and URL.</p>
+<p>For each below, right click on the bookmarks bar, and click 'Add Page'. Then enter the Name and URL.   </p>
 
 <p>This will prompt you for a new javascript file to inject.</p>
 
 <pre><code>Name: Inject New URL
-URL: javascript(function()%7B(function()%20%7Bwindow.__JS_bookmarklet_clear_last_url%20%3D%20true%3B(function(d%2C%20t)%20%7Bwhile%20(t.length)%20%7Bvar%20s%20%3D%20d.createElement(%22script%22)%3Bs.src%20%3D%20t.shift()%3Bd.head.appendChild(s)%3B%7D%7D)(document%2C%5B%22https%3A%2F%2Fs3.amazonaws.com%2Fjs-bookmarklet-crossdomain-storage%2Flast_url_bookmarklet.js%22%5D)%7D)()%7D)()
+URL: javascript(function()%7B(function()%20%7Bwindow.__JS_bookmarklet_clear_last_url%20%3D%20true%3B(function(d%2C%20t)%20%7Bwhile%20(t.length)%20%7Bvar%20s%20%3D%20d.createElement(%22script%22)%3Bs.src%20%3D%20t.shift()%3Bd.head.appendChild(s)%3B%7D%7D)(document%2C%5B%22https%3A%2F%2Fs3.amazonaws.com%2Fjs-bookmarklet-crossdomain-storage%2Flast_url_bookmarklet.js%22%5D)%7D)()%7D)()   
 </code></pre>
 
 <p>This will inject the last url you injected. So if you refresh the page, or go to a different page, you don't have to re-enter the javascript file url.</p>
 
 <pre><code>Name: Inject Last URL
-URL: javascript:(function()%7B(function()%7B(function()%7B(function(d%2Ct)%7Bwhile(t.length)%20%7Bvar%20s%3Dd.createElement(%22script%22)%3Bs.src%3Dt.shift()%3Bd.head.appendChild(s)%3B%7D%7D)(document%2C%5B%22https%3A%2F%2Fs3.amazonaws.com%2Fjs-bookmarklet-crossdomain-storage%2Flast_url_bookmarklet.js%22%5D)%7D)()%7D)()%7D)()
+URL: javascript:(function()%7B(function()%7B(function()%7B(function(d%2Ct)%7Bwhile(t.length)%20%7Bvar%20s%3Dd.createElement(%22script%22)%3Bs.src%3Dt.shift()%3Bd.head.appendChild(s)%3B%7D%7D)(document%2C%5B%22https%3A%2F%2Fs3.amazonaws.com%2Fjs-bookmarklet-crossdomain-storage%2Flast_url_bookmarklet.js%22%5D)%7D)()%7D)()%7D)()   
 </code></pre>
 
 <p>Now you're bookmarks bar should look something like this:
-<img src="http://i.imgur.com/GMf4Xwb.png" alt=""></p>
+<img src="http://i.imgur.com/GMf4Xwb.png" alt="">  </p>
+
+<h3>
+<a id="step-3-try-it-out" class="anchor" href="#step-3-try-it-out" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 3: Try it out</h3>
 
 <p>Once that's done, click 'Inject New URL' and enter: <a href="https://s3.amazonaws.com/js-bookmarklet-crossdomain-storage/test.js">https://s3.amazonaws.com/js-bookmarklet-crossdomain-storage/test.js</a></p>
 
-<p>You can open up the Developer Tools for further insight:
+<p><em>Note:</em> You can open up the Developer Tools for further insight:
 <img src="http://i.imgur.com/DaQmCZc.png" alt=""></p>
-      </section>
-    </div>
+        </section>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Quick JS Injection maintained by <a href="https://github.com/geoffdutton">geoffdutton</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+        <footer>
+          Quick JS Injection is maintained by <a href="https://github.com/geoffdutton">geoffdutton</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
 
-              <script type="text/javascript">
+                  <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -82,6 +81,7 @@ URL: javascript:(function()%7B(function()%7B(function()%7B(function(d%2Ct)%7Bwhi
             } catch(err) {}
           </script>
 
-
+      </div>
+    </div>
   </body>
 </html>
