@@ -36,15 +36,17 @@
 <h3>
 <a id="right-click-and-add-each-link-as-a-bookmarklet" class="anchor" href="#right-click-and-add-each-link-as-a-bookmarklet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Right click and add each link as a bookmarklet</h3>
 
-<p>This will prompt you for a new javascript file to inject.
-Inject New URL</p>
+<p>This will prompt you for a new javascript file to inject.</p>
 
-<p>Once that's done, try entering this: <a href="https://s3.amazonaws.com/js-bookmarklet-crossdomain-storage/test.js">https://s3.amazonaws.com/js-bookmarklet-crossdomain-storage/test.js</a></p>
+<pre><code>Name: Inject New URL
+URL: javascript(function()%7B(function()%20%7Bwindow.__JS_bookmarklet_clear_last_url%20%3D%20true%3B(function(d%2C%20t)%20%7Bwhile%20(t.length)%20%7Bvar%20s%20%3D%20d.createElement(%22script%22)%3Bs.src%20%3D%20t.shift()%3Bd.head.appendChild(s)%3B%7D%7D)(document%2C%5B%22https%3A%2F%2Fs3.amazonaws.com%2Fjs-bookmarklet-crossdomain-storage%2Flast_url_bookmarklet.js%22%5D)%7D)()%7D)()
+</code></pre>
 
 <p>This will inject the last url you injected. So if you refresh the page, or go to a different page, you don't have to re-enter the javascript file url.
-Inject Last URL</p>
+    Name: Inject Last URL 
+    URL: javascript:(function()%7B(function()%7B(function()%7B(function(d%2Ct)%7Bwhile(t.length)%20%7Bvar%20s%3Dd.createElement(%22script%22)%3Bs.src%3Dt.shift()%3Bd.head.appendChild(s)%3B%7D%7D)(document%2C%5B%22https%3A%2F%2Fs3.amazonaws.com%2Fjs-bookmarklet-crossdomain-storage%2Flast_url_bookmarklet.js%22%5D)%7D)()%7D)()%7D)()</p>
 
-<p>Once you've right clicked on each link and saved them as a bookmarklet, try them out. The final result should look like this:</p>
+<p>Once that's done, try entering this: <a href="https://s3.amazonaws.com/js-bookmarklet-crossdomain-storage/test.js">https://s3.amazonaws.com/js-bookmarklet-crossdomain-storage/test.js</a></p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/geoffdutton">geoffdutton</a></p>
@@ -52,6 +54,16 @@ Inject Last URL</p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-32324341-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
